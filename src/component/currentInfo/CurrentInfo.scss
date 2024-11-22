@@ -1,0 +1,65 @@
+@mixin gridSystem {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-info {
+    @include gridSystem();
+    grid-template-rows: auto auto auto auto;
+
+    .date-time {
+        text-align: center;
+        margin-top: 20px;
+        color: #6c757d;
+        letter-spacing: 2px
+
+    }
+
+    .temparature {
+        @include gridSystem();
+        grid-template-columns: 6fr 4fr ;
+        padding: 0 auto;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .temparature-F{
+            font-size: 2rem;
+            
+            sup {
+                font-size: 1rem;
+                sup {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+        
+    }
+
+    
+    .temparature-status {
+        text-align: center;
+        font-size: 2rem
+    }
+
+    .temparature-description {
+        @include gridSystem();
+        grid-template-columns: auto auto;
+        gap: 36px;
+        font-size: 1.2rem;
+
+        .humidity, .wind-speed {
+            @include gridSystem();
+            margin-top: 30px;
+            grid-template-rows: auto auto;
+            row-gap: 20px;
+            text-align: center;
+
+            p {
+                color: #6c757d;
+            }
+        } 
+    }
+}

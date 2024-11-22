@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@mixin gridSystem {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+// General styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+// Background styles
+.background {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: #ebeefb;
+  width: 100%;
+  height: 100dvh;
+  padding: 15px;
+
+  .box {
+    width: 992px;
+    height: 100%;
+    border: 2px solid #fff;
+    margin: 0 auto;
+    padding: 15px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    .left-section {
+      display: grid;
+      grid-template-rows: 2fr 8fr;
+
+    }
+
+    .right-section {
+      display: grid;
+      grid-template-rows: 7fr 3fr;
+
+      .under-section {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+
+      }
+
+
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .box {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

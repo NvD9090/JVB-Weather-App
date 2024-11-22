@@ -1,0 +1,39 @@
+@mixin gridSystem {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-module {
+    border: 0 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 8px !important;
+    transition: background-color 0.3s ease !important;
+    width: 100% !important;
+
+    &.active {
+        background-color: #007bff;
+        color: #ffffff;
+
+        .humidity-value {
+            font-weight: bold;
+        }
+    }
+
+    .date-time,
+    .humidity-title,
+    .humidity-value {
+        text-align: center;
+
+    }
+
+
+    img {
+        width: 64px;
+        height: 64px;
+    }
+}
