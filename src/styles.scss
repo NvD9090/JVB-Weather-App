@@ -62,6 +62,22 @@
 
   }
 
+  .left-section {
+    width: 30%;
+    /* Đảm bảo phần bên trái chiếm 30% chiều rộng */
+    min-width: 300px;
+    /* Chiều rộng tối thiểu để không thay đổi khi nội dung thay đổi */
+  }
+
+  .right-section {
+    width: 70%;
+    /* Đảm bảo phần bên phải chiếm 70% chiều rộng */
+    min-width: 500px;
+    /* Chiều rộng tối thiểu để giữ ổn định */
+    min-height: 400px;
+    /* Đặt chiều cao tối thiểu */
+  }
+
   @media (max-width: 768px) {
     .box {
       width: 100%;

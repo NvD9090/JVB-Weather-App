@@ -34,6 +34,8 @@ const TemperatureChart: React.FC<TemperatureChartProps & { selectedDate: string 
   weatherData,
   selectedDate,
 }) => {
+
+
   const [selectedProperty, setSelectedProperty] = useState<'temperature' | 'humidity' | 'uv'>('temperature');
 
   // Get the current hour in "HH:00" format

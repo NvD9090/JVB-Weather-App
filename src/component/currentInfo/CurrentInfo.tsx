@@ -17,8 +17,6 @@ const CurrentInfo = () => {
     if (weather.status === 'failed') {
         return (
             <div className="current-info">
-                <h1>404</h1>
-                <p>City not found. Please try again.</p>
             </div>
         );
     }
